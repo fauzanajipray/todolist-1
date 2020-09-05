@@ -16,7 +16,7 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 5px;
 }
 
 body {
@@ -35,8 +35,8 @@ body , html {
 }
 
 .container {
-    width: 600px;
-    height: 800px;
+    width: 500px;
+    height: 700px;
     background-color: #f2eecb;
     border-radius: 4px;
     padding: 32px;
@@ -59,14 +59,14 @@ body , html {
 .header-title {
     flex: 1;
     text-align: center;
-    font-size: 3.6rem;
+    font-size: 5rem;
     color: var(--main-black-color);
     font-family: 'Homemade Apple', 'sans-serif';
     text-transform: lowercase;
 }
 
 .header-btn {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-family: 'Bungee','sans-serif';
     padding: 16px;
     cursor: pointer;
@@ -95,19 +95,19 @@ body , html {
 .add-input {
     background: unset;
     border: unset;
-    padding: 0 64px;
+    padding: 0 40px;
 
     flex: 1;
     border-bottom: 1px solid var(--main-red-color);
     outline: unset;
 
     font-family: 'Homemade Apple', 'sans-serif';
-    font-size: 16px;
+    font-size: 3rem;
     text-transform: lowercase;
 }
 
 .add-btn {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-family: 'Bungee', 'sans-serif';
 
     padding: 0px;
@@ -134,9 +134,9 @@ body , html {
     flex: 1 0 auto;
     text-align: center;
     min-height: 34px;
-    margin: 16px 0 0;
+    margin: 12px 0 0;
     font-family: "Homemade Apple", "sans-serif";
-    font-size: 24px;
+    font-size: 20px;
 
     border-bottom: 1px solid var(--main-red-color);
 }
