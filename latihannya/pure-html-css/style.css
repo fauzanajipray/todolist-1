@@ -31,7 +31,7 @@ body , html {
 
 .container {
     width: 600px;
-    height: 600px;
+    height: 800px;
     background-color: #f2eecb;
     border-radius: 4px;
     padding: 32px;
@@ -61,7 +61,43 @@ body , html {
 .header-btn {
     font-size: 1.8rem;
     font-family: 'Bungee','sans-serif';
-    padding: 24px;
+    padding: 16px;
+    cursor: pointer;
+    background: unset;
+    border: unset;
+}
+
+.add { 
+    padding: 16px;
+}
+
+.add-form {
+    display: flex;
+    align-items: flex-start;
+}
+
+.add-input {
+    background: unset;
+    border: unset;
+    padding: 0 64px;
+
+    flex: 1;
+    border-bottom: 1px solid var(--main-red-color);
+    outline: unset;
+
+    font-family: 'Homemade Apple', 'sans-serif';
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+.add-btn {
+    font-size: 1.8rem;
+    font-family: 'Bungee', 'sans-serif';
+
+    padding: 0px;
+    padding-left: 16px;
+    cursor: pointer;
+    align-items: flex-start;
     background: unset;
     border: unset;
 }
