@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import './style.css';
+import Paper from './components/Paper'
 
 class App extends Component {
   render () {
     return (
-      <div className="container">
-        <div className="frame">
+      <Paper>
           <section className="header">
             <button className="header-btn main-black-color">Add</button>
             <h1 className="header-title">todo list</h1>
@@ -50,8 +50,7 @@ class App extends Component {
                 <span class="todo-text">Learning React</span>
             </div>
           </section>
-        </div>
-      </div>
+      </Paper>
     )
   }
 }
