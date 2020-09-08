@@ -1,38 +1,47 @@
 import React from 'react'
+import Todo from './Todo'
 
-const Todos = () => (
-    <section class="todos">
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-      <div class="todo">
-          <span class="todo-text">Learning React</span>
-      </div>
-    </section>
-)
+
+const Todos = () => {
+    const todos = [
+        {
+            text: "Belajar React"
+        },
+        {
+            text: "Belajar Props"
+        },
+        {
+            text: "Belajar State"
+        },
+        {
+            text: "Belajar Hooks"
+        },
+        {
+            text: "Belajar Next.js"
+        },
+        {
+            text: "Belajar React"
+        },
+        {
+            text: "Belajar Props"
+        },
+        {
+            text: "Belajar State"
+        },
+        {
+            text: "Belajar Hooks"
+        },
+        {
+            text: "Belajar Next.js"
+        }
+    ]
+    return (
+        <section class="todos">
+            {todos.map(todo => (
+                <Todo text={todo.text}/>
+            ))}
+        </section>
+    )
+}
 
 export default Todos
