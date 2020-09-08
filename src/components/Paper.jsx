@@ -12,9 +12,9 @@ const Paper = ({children}) => {
 };
 
 Paper.propTypes ={
-    children: PropTypes.oneOfType(
+    children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node
+        PropTypes.node]
     )
 }
 
