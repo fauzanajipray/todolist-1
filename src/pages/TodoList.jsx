@@ -11,7 +11,9 @@ const TodoList = () => {
     { text: "Belajar Props", isCompleted: false},
     { text: "Belajar State", isCompleted: false}
   ])
-  const clearTodo = () => setTodos([])
+  const clearTodo = () => {
+    !showAdd && setTodos([])  
+  }
   const [showAdd, setShowAdd] = useState(false)
 
   const addTodo = (value) => {
@@ -37,7 +39,11 @@ const TodoList = () => {
   
   return (
     <Paper>
-        <Header showAddToggle={showAddToggle} showAdd={showAdd} clearTodo={clearTodo}  />
+        <Header 
+          showAddToggle={showAddToggle}
+          showAdd={showAdd}
+          clearTodo={clearTodo} 
+        />
         <TodoForm addTodo={addTodo} showAdd={showAdd} todos={todos} />
         <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
