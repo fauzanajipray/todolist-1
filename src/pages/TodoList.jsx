@@ -10,19 +10,21 @@ const TodoList = () => {
     { text: "Belajar Props"},
     { text: "Belajar State"},
     { text: "Belajar Hooks"},
-    { text: "Belajar Next.js"},
-    { text: "Belajar React"},
-    { text: "Belajar Props"},
-    { text: "Belajar State"},
-    { text: "Belajar Hooks"},
     { text: "Belajar Next.js"}
   ])
+
+  const addTodo = (value) => {
+    const addedtodo = [...todos, {text: value}]
+    console.log(addedtodo);
+
+    setTodos(addedtodo);
+  }
 
   return (
     <Paper>
         <Header />
-        <TodoForm />
-        <Todos todos={todos} />
+        <TodoForm addTodo={addTodo}/>
+        <Todos todos={todos}/>
     </Paper>
   )
 }

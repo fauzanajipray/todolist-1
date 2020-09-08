@@ -13,10 +13,8 @@ const TodoForm = ({addTodo}) => {
         }
 
         addTodo(value)
-        alert(value)
         setValue("")
     }
-    console.log(value);
     return (
         <section className="add">
             <form action="" className="add-form" onSubmit={handleFormSubmit}>
