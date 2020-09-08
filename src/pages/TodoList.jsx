@@ -5,21 +5,28 @@ import TodoForm from '../components/TodoForm';
 import Todos from '../components/Todos';
 
 const TodoList = () => {
+
   const [todos, setTodos ] = useState([
     { text: "Belajar React", isCompleted: false},
     { text: "Belajar Props", isCompleted: false},
     { text: "Belajar State", isCompleted: false}
   ])
+  const clearTodo = () => setTodos([])
   const [showAdd, setShowAdd] = useState(false)
 
   const addTodo = (value) => {
-    const addedtodo = [...todos, {text: value, isCompleted: false}]
-    console.log(addedtodo);
+    if (todos.length < 10){
+      const addedtodo = [...todos, {text: value, isCompleted: false}]
+      console.log(addedtodo);
 
-    setTodos(addedtodo);
+      setTodos(addedtodo);
+    }else {
+      alert("Only 10 todos is allowed!")
+    }
   }
 
   const completeTodo = (index) => {
+    
     const addedtodo = [...todos]
     addedtodo[index].isCompleted = !addedtodo[index].isCompleted
 
@@ -27,11 +34,11 @@ const TodoList = () => {
   }
 
   const showAddToggle  = () => setShowAdd(!showAdd)
-
+  
   return (
     <Paper>
-        <Header showAddToggle={showAddToggle} showAdd={showAdd}/>
-        <TodoForm addTodo={addTodo} showAdd={showAdd} />
+        <Header showAddToggle={showAddToggle} showAdd={showAdd} clearTodo={clearTodo}  />
+        <TodoForm addTodo={addTodo} showAdd={showAdd} todos={todos} />
         <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
   )
