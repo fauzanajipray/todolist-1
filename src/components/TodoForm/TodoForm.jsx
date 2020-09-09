@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
+import styles from './todoForm.module.css';
+import cx from 'classnames'
 
 const TodoForm = ({addTodo, showAdd}) => {
 
@@ -23,10 +25,10 @@ const TodoForm = ({addTodo, showAdd}) => {
     
     if (showAdd) {
         return (
-            <section className="add">
-                <form action="" className="add-form" onSubmit={handleFormSubmit}>
-                    <input type="text" className="add-input" value={value} onChange={e => setValue(e.target.value)} />
-                    <button className="add-btn main-black-color">Add</button>
+            <section className={styles.add}>
+                <form action="" className={styles.addForm} onSubmit={handleFormSubmit}>
+                    <input type="text" className={styles.addInput} value={value} onChange={e => setValue(e.target.value)} />
+                    <button className={cx(styles.addBtn,styles.mainBlackColor)}>Add</button>
                 </form>
             </section>
         )
